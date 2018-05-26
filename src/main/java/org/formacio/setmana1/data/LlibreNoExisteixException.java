@@ -1,3 +1,7 @@
 package org.formacio.setmana1.data;
 
-public class LlibreNoExisteixException extends Exception {}
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+
+@ControllerAdvice
+public class LlibreNoExisteixException extends Exception { }
