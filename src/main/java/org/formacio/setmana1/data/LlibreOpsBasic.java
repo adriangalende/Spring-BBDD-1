@@ -80,7 +80,12 @@ public class LlibreOpsBasic {
 	 * Si el llibre indicat no existeix, retorna null
 	 */
 	public Recomanacio recomenacioPer (String isbn) {
-		return null;
+		try{
+			Llibre llibre = carrega(isbn);
+			return llibre.getRecomanacio();
+		} catch (LlibreNoExisteixException ex){
+			return null;
+		}
 	}
 	
 }
